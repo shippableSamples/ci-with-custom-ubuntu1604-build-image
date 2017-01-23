@@ -25,8 +25,8 @@ build:
 
   # boot the image that we just built
   pre_ci_boot:
-    image_name: $DOCKER_ACC/ci-with-custom-ubuntu1604-build-image
-    image_tag: test
+    image_name: $DOCKER_ACC/$DOCKER_REPO
+    image_tag: $DOCKER_TAG
     pull: false
     options: '--privileged=true --net=bridge -e DOCKER_TAG=$DOCKER_TAG'
 
