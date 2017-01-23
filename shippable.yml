@@ -27,7 +27,7 @@ build:
     image_name: avinci/ci-with-custom-ubuntu1604-build-image
     image_tag: test
     pull: false
-    options: '--privileged=true --net=bridge -e DOCKER_TAG=test'
+    options: '--privileged=true --net=bridge -e DOCKER_TAG=$DOCKER_TAG'
 
   ci:
     # npm mirrors can sometimes be flacky, better to use shippable_retry
